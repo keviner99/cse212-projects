@@ -16,9 +16,16 @@ public static class Arrays
         // be implemented by another person.
 
         // I used the Arrays_Tests.cs as a reference to complete this part
-        // First, I declared the array that will store the multiples
+        // Step 1:  I declared the array that will store the multiples of the given number
+        // Step 2: populate the array with multiples of the given number using a For Loop
+        // The loop should iterate through each index of the multiples array 
+        // Calculate the multiple for the index (i+1) starting from 1 up to length
         
         double[] multiples = new double [length];
+
+        for ( int i = 0; i < length; i ++) {
+            multiples[i] = number * (i + 1);
+        }
 
         return []; // replace this return statement with your own
     }
