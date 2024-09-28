@@ -48,6 +48,10 @@ public static class Arrays
         // Use the following documentation https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-6.0#methods 
         // to find the methods using for this part (AddRange, GetRange, RemoveRange, InsertRange)
 
-        
+        //use modulo (%) to deal with wrapping around the index number back to 0.
+        amount = amount % data.Count;
+
+
+
     }
 }
