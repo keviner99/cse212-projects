@@ -59,6 +59,9 @@ public static class Arrays
         List<int> tempList = new List<int>();
         tempList.AddRange(data.GetRange(arrayLength - amount, amount));
 
+        // Step 3: Remove the numbers from the end of the array for the number of values we stored. 
+        data.RemoveRange(arrayLength - amount, amount);
+
 
 
 
