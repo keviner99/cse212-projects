@@ -51,6 +51,9 @@ public static class Arrays
         //use modulo (%) to deal with wrapping around the index number back to 0.
         amount = amount % data.Count;
 
+        // Step 1: Store the length of the array in a variable 
+        int arrayLength = data.Count();
+
 
 
     }
