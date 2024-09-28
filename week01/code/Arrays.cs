@@ -20,6 +20,7 @@ public static class Arrays
         // Step 2: populate the array with multiples of the given number using a For Loop
         // The loop should iterate through each index of the multiples array 
         // Calculate the multiple for the index (i+1) starting from 1 up to length
+        // Step 3: Return the array of doubles containing the multiples of the given number 
         
         double[] multiples = new double [length];
 
@@ -27,7 +28,7 @@ public static class Arrays
             multiples[i] = number * (i + 1);
         }
 
-        return []; // replace this return statement with your own
+        return multiples; // replace this return statement with your own
     }
 
     /// <summary>
