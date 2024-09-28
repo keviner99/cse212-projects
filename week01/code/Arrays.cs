@@ -62,6 +62,9 @@ public static class Arrays
         // Step 3: Remove the numbers from the end of the array for the number of values we stored. 
         data.RemoveRange(arrayLength - amount, amount);
 
+        // Step 4: Use InsertRange to insert at the beginning of the array the values we stored previously in the temporary array
+        data.InsertRange(0, tempList.GetRange(0, tempList.Count()));
+
 
 
 
