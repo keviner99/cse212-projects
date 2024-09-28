@@ -54,6 +54,13 @@ public static class Arrays
         // Step 1: Store the length of the array in a variable 
         int arrayLength = data.Count();
 
+        // Step 2: Create a temporary array called tempList, then use the GetRange method to get the amount to shift the list 
+        // Take and store that number of the last values in a temporary array
+        List<int> tempList = new List<int>();
+        tempList.AddRange(data.GetRange(arrayLength - amount, amount));
+
+
+
 
 
     }
