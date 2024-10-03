@@ -40,18 +40,26 @@ public class TakingTurnsQueue
             throw new InvalidOperationException("No one in the queue.");
         }
 
-        //Get the next person
-        Person person = _people.Dequeue();
-
-        // If turns are left greater than 0
-        if (person.Turns > 0)
+        // Add else and use if statements to handle turns
+        else 
         {
-            // Decrement the turns
+            Person person = _people.Dequeue();
+
+            if (person.Turns < 1) {
+                _people.Enqueue(person);
+
+                return person;
+            }
+
             person.Turns -= 1;
-            _people.Enqueue(person);
+
+            if (person.Turns >= 1) {
+                _people.Enqueue(person);
+            }
+
+            return person;
+
         }
-        // Return the dequeued person
-        return person;
 
     }
 
