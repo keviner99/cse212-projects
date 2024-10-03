@@ -50,7 +50,8 @@ public class TakingTurnsQueue
             person.Turns -= 1;
             _people.Enqueue(person);
         }
-
+        // Return the dequeued person
+        return person;
 
     }
 
