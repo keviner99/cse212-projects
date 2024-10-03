@@ -6,13 +6,19 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 public class PriorityQueueTests
 {
     [TestMethod]
-    // Scenario: 
-    // Expected Result: 
-    // Defect(s) Found: 
+    // Scenario: Enqueu items with different priorities
+    // Expected Result: Items should be dequeued in highest priority first
+    // Defect(s) Found: Did not remove items from queue
     public void TestPriorityQueue_1()
     {
         var priorityQueue = new PriorityQueue();
-        Assert.Fail("Implement the test case and then remove this.");
+        priorityQueue.Enqueue("low", 1);
+        priorityQueue.Enqueue("medium", 5);
+        priorityQueue.Enqueue("high", 10);
+
+        Assert.AreEqual("high", priorityQueue.Dequeue());
+        Assert.AreEqual("medium", priorityQueue.Dequeue());
+        Assert.AreEqual("low", priorityQueue.Dequeue());
     }
 
     [TestMethod]
