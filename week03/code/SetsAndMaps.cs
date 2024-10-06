@@ -91,6 +91,13 @@ public static class SetsAndMaps
         word1 = word1.ToLower().Replace("", "");
         word2 = word2.ToLower().Replace(" ", "");
 
+        if (word1.Length != word2.Length)
+        {
+            return false;
+        }
+
+        
+
         return false;
     }
 
