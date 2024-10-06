@@ -88,6 +88,9 @@ public static class SetsAndMaps
     public static bool IsAnagram(string word1, string word2)
     {
         // TODO Problem 3 - ADD YOUR CODE HERE
+        word1 = word1.ToLower().Replace("", "");
+        word2 = word2.ToLower().Replace(" ", "");
+
         return false;
     }
 
