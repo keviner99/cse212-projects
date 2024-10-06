@@ -22,8 +22,8 @@ public static class SetsAndMaps
     public static string[] FindPairs(string[] words)
     {
         // TODO Problem 1 - ADD YOUR CODE HERE
-        var actualSet = new HashSet<string>(words.Length);
-        var expectedResult = new List<string>(words.Length);
+        var actualSet = new HashSet<string>(words);
+        var expectedResult = new List<string>();
 
         return [];
     }
