@@ -35,7 +35,7 @@ public static class SetsAndMaps
             }
         }
 
-        return [];
+        return expectedResult.ToArray();
     }
 
     /// <summary>
