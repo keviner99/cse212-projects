@@ -30,6 +30,8 @@ public static class SetsAndMaps
             if (actualSet.Contains(reversedWord) && word != reversedWord)
             {
                 expectedResult.Add($"{word} & {reversedWord}");
+                actualSet.Remove(word);
+                actualSet.Remove(reversedWord);
             }
         }
 
