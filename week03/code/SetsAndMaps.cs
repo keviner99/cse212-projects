@@ -25,6 +25,10 @@ public static class SetsAndMaps
         var actualSet = new HashSet<string>(words);
         var expectedResult = new List<string>();
 
+        foreach (var word in words){
+            var reversedWord = new string(word.Reverse().ToArray());
+        }
+
         return [];
     }
 
