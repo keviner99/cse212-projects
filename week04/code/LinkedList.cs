@@ -144,12 +144,18 @@ public class LinkedList : IEnumerable<int>
                 if (current == _head) {
                     RemoveHead();
                 }
+
+                // If node is the tail, call remove_tail
+                else if (current == _tail) {
+                    RemoveTail();
+                }
+                else {
+                    current.Prev!.Next = current.Next;
+                    current.Next!.Prev = current.Prev;
+                }
+                return;
             }
-            // If node is the tail, call remove_tail
-            else if (current == _tail) {
-                RemoveTail();
-            }
-            
+            current = current.Next;
         }
     }
 
