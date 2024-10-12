@@ -165,6 +165,19 @@ public class LinkedList : IEnumerable<int>
     public void Replace(int oldValue, int newValue)
     {
         // TODO Problem 4
+        Node? current = _head;
+
+        while (current is not null) {
+            //If node contains old values, replace it with new ones
+            if (current.Data == oldValue) 
+            {
+                current.Data = newValue;
+            }
+
+            //Move to next node 
+            current = current.Next; 
+
+        }
     }
 
     /// <summary>
