@@ -140,10 +140,14 @@ public class LinkedList : IEnumerable<int>
 
         while (current is not null) {
             if (current.Data == value) {
-                // If the node os the head, call remove_head
+                // If the node is the head, call remove_head
                 if (current == _head) {
                     RemoveHead();
                 }
+            }
+            // If node is the tail, call remove_tail
+            else if (current == _tail) {
+                RemoveTail();
             }
             
         }
