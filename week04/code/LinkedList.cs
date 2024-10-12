@@ -135,6 +135,11 @@ public class LinkedList : IEnumerable<int>
     public void Remove(int value)
     {
         // TODO Problem 3
+        Node? current = _head;
+
+        while (current is not null) {
+            
+        }
     }
 
     /// <summary>
