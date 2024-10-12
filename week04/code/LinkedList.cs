@@ -1,4 +1,5 @@
 using System.Collections;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 public class LinkedList : IEnumerable<int>
 {
@@ -138,6 +139,12 @@ public class LinkedList : IEnumerable<int>
         Node? current = _head;
 
         while (current is not null) {
+            if (current.Data == value) {
+                // If the node os the head, call remove_head
+                if (current == _head) {
+                    RemoveHead();
+                }
+            }
             
         }
     }
