@@ -43,6 +43,11 @@ public static class Recursion
     public static void PermutationsChoose(List<string> results, string letters, int size, string word = "")
     {
         // TODO Start Problem 2
+        if (size == 0)
+            results.Add(word);
+        else
+            for (var i = 0; i < letters.Length; i++)
+                PermutationsChoose(results, letters.Remove(i, 1), size - 1, word + letters[i]);
     }
 
     /// <summary>
@@ -100,9 +105,22 @@ public static class Recursion
             return 4;
 
         // TODO Start Problem 3
+        if (remember is null)
+        {
+            remember = new Dictionary<int, decimal>();
+        }
+        else
+        {
+            if (remember.ContainsKey(s))
+            {
+                return remember[s];
+            }
+        }
 
         // Solve using recursion
-        decimal ways = CountWaysToClimb(s - 1) + CountWaysToClimb(s - 2) + CountWaysToClimb(s - 3);
+        //The parameter remember has already been added as an input parameter to the function for you to complete this task.
+        decimal ways = CountWaysToClimb(s - 1, remember) + CountWaysToClimb(s - 2, remember) + CountWaysToClimb(s - 3, remember);
+        remember.Add(s, ways);
         return ways;
     }
 
@@ -122,6 +140,7 @@ public static class Recursion
     public static void WildcardBinary(string pattern, List<string> results)
     {
         // TODO Start Problem 4
+
     }
 
     /// <summary>
