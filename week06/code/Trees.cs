@@ -51,5 +51,8 @@ public static class Trees
         // TODO Start Problem 5
         if (sortedNumbers.Length == 0)
             return;
+
+        int middle = (first + (last - first) / 2);
+        bst.Insert(sortedNumbers[middle]);
     }
 }
