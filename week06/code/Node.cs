@@ -36,7 +36,9 @@ public class Node
         // TODO Start Problem 2
         if (value == Data)
             return true;
-            
+        else if (value < Data && Left is not null)
+            return Left.Contains(value);
+
 
         return false;
     }
