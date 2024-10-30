@@ -54,5 +54,10 @@ public static class Trees
 
         int middle = (first + (last - first) / 2);
         bst.Insert(sortedNumbers[middle]);
+
+        if (middle > first)
+            InsertMiddle(sortedNumbers, first, middle - 1, bst);
+        if (middle < last)
+            InsertMiddle(sortedNumbers, middle + 1, last, bst);
     }
 }
